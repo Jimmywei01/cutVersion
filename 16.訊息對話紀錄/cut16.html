@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="dialogue">
+    <div class="user remote">
+      <div class="avatar">
+        <div class="pic">
+          <img src="https://picsum.photos/100/100?random=16">
+        </div>
+        <div class="name">Sivly</div>
+      </div>
+      <div class="txt">Before Moammar Long language string Long language.</div>
+    </div>
+    <div class="user local">
+      <div class="avatar">
+        <div class="pic">
+          <img src="https://picsum.photos/100/100?random=17">
+        </div>
+        <div class="name">Jimmy</div>
+      </div>
+      <div class="txt">Before Moammar Long language string Long language string Long language string Long language
+        string,there were the Phoenicians.</div>
+    </div>
+  </div>
+</body>
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dialogue {
+    width: 500px;
+    padding: 20px;
+    box-shadow: 0 0 10px #3e92cc;
+    background-color: #f4f5f7;
+  }
+
+  .user {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+
+  .local {
+    justify-content: flex-end;
+  }
+
+  .avatar .user {
+    width: 60px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .avatar .name {
+    text-align: center;
+  }
+
+  .user .pic {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .user .pic img {
+    width: 100%;
+    vertical-align: middle;
+  }
+
+  .user .txt {
+    word-wrap: break-word;
+    background-color: #aaa;
+    padding: 16px;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .remote .txt {
+    margin-left: 20px;
+    margin-right: 80px;
+    color: #a1b4c5;
+    background-color: #fff;
+  }
+
+  .local .txt {
+    margin-right: 20px;
+    margin-left: 80px;
+    order: -1;
+    background-color: #3e92cc;
+    color: #FFF;
+  }
+  /* 三角形 */
+  .remote .txt::before,
+  .local .txt::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+  .remote .txt::before {
+    border-right: 10px solid #fff;
+    left: -10px;
+  }
+
+  .local .txt::before {
+    border-left: 10px solid #3e92cc;
+    right: -10px;
+  }
+</style>
+
+</html>

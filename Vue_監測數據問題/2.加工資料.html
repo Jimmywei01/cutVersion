@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <p>{{person}}</p>
+    <button @click='update'>123</button>
+  </div>
+</body>
+<!--
+  1.Vue 響應式資料
+  2.加工資料 -> 把資料都加上 get、set
+  3.vm._data = data -> 把修改後的資料賦予給 vm 實例修改，顯示在頁面上
+-->
+<script>
+  let data =
+    {
+      id: '001',
+      name: 'John',
+      age: 34
+    }
+
+  // 監控實例
+  let obs = new Observable(data)
+  console.log(obs)
+  let vm = {}
+  vm._data = data = obs
+  // console.log(vm)
+
+  // 簡易監控功能
+  function Observable(obj){
+    // 把屬性組成 array
+    const key = Object.keys(obj)
+    key.forEach((k) => {
+      // 重新設定每個 id 的值
+      Object.defineProperty(this, k,{
+        get(){ return obj[k]},
+        set(newValue){
+          console.log('修改了')
+          obj[k] = newValue
+        }
+      })
+    })
+  }
+
+</script>
+
+</html>

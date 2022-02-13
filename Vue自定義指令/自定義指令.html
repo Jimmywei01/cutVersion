@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+  <!--
+    1.定義一個 v-big 指令，會把綁定的數值放大 10 倍
+  -->
+  <div id="root">
+    <!-- <h2>{{name}}</h2> -->
+    <h2>當前 n 值:
+      <span v-text='n'></span>
+    </h2>
+    <h2>放大 n 倍的值:
+      <span v-big='n'></span>
+    </h2>
+    <button @click='n++'>click</button>
+  </div>
+</body>
+  <script>
+    new Vue({
+    el: '#root',
+    data() {
+      return {
+        n:1
+      }
+    },
+    // 區域性 directives
+    /*
+      el -> html 元素
+      binding -> 把元素和指令一起「關聯綁定」
+    */
+    directives:{
+      big(el, binding){
+        // console.log(el, binding, el instanceof HTMLElement);
+        // 什麼時候觸發綁定？1.一開始執行時 2.指令所在 template 更新時
+        console.log('big')
+        el.innerText = binding.value * 10
+      }
+    }
+  })
+  </script>
+</html>

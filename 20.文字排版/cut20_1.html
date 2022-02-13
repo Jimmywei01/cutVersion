@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div class="wrap">
+  <div class="container">
+    <h1>CSS COKE IS AWESOME</h1>
+    <div class="txt">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>本文是配合<a href="https://ithelp.ithome.com.tw/users/20112550/ironman/2623">此教學文章</a>使用的範例，但內容文字所提的都是真實的呦。</p>
+    </div>
+  </div>
+</div>
+</body>
+<style>
+  *{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  }
+  .container{
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  padding: 100px 0;
+  }
+  .container h1{
+  width: 400px;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 20px 15px 0;
+  background-color: #D5C7B9;
+  }
+  .container h1:after{
+  content: '';
+  display: block;
+  height: 4px;
+  width: 4em;
+  background-color: #000;
+  margin-left: auto;
+  }
+  .container .txt{
+  width: 800px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  /* 分成兩列 */
+  column-count: 2;
+  column-gap: 30px;
+  }
+</style>
+</html>

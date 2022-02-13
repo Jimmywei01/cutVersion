@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./assets/favicon-32x32.png"
+  >
+
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body>
+  <div id="header">
+    <div class="nav">
+      <div class="logo">
+        <img
+          src="./assets/shared/logo.svg"
+          alt=""
+        />
+      </div>
+      <div class="line"></div>
+      <div class="list">
+        <ul>
+          <li> 00 Home </li>
+          <li> 01 Destination </li>
+          <li> 02 Crew </li>
+          <li> 03 Technology </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <div class="txt-block">
+      <div class="text-header">
+        SO, YOU WANT TO TRAVEL TO
+      </div>
+      <div class="text-container">
+        SPACE
+      </div>
+      <div class="text-footer">
+        Let's face it; if you want to go to space, you might as well genuinely go to
+        outer space and not hover kind of on the edge of it. Well sit back, and relax
+        because we'll give you a truly out of this world experience!
+      </div>
+    </div>
+    <div class="text-boll">
+      <p> Explore </p>
+    </div>
+  </div>
+
+</body>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  body {
+    font-family: 'Bellefair', serif;
+    max-width: 1440px;
+    height: 900px;
+    background-image: url('./assets/home/background-home-desktop.jpg');
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    margin-left: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  .list {
+    position: relative;
+    align-items: center;
+    display: flex;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: hsla(0, 0%, 100%, .3);
+    z-index: -1;
+  }
+
+  .list::before {
+    content: " ";
+    border:1px solid yellow;
+    right: 50px;
+    position: absolute;
+    width: 150px;
+    color:yellow
+  }
+
+  .list ul {
+    display: flex;
+    position: relative;
+    /* padding: 0 830px; */
+    /* justify-content: space-between; */
+  }
+
+  /*  */
+  .list li {
+    list-style: none;
+    margin-right: 20px;
+    color:#fff;
+  }
+
+  .txt-block {
+    width: 450px;
+    height: 382px;
+  }
+
+  .text-header {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+  }
+
+  .text-container {
+    font-size: 150px
+  }
+
+  .text-footer {
+    font-family: normal;
+    font-size: 16px
+  }
+
+  .text-boll {
+    width: 274px;
+    height: 274px;
+    border: 1px solid;
+    border-radius: 274px;
+  }
+
+  .text-boll p {
+    font-size: 32px;
+    text-align: center;
+    line-height: 200px;
+  }
+</style>
+
+</html>

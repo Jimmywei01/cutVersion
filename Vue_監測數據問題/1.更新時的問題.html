@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <p>{{person}}</p>
+    <button @click='update'>123</button>
+  </div>
+</body>
+<!--
+  1.打開 Vue tool 監測數據
+  2.點擊按鈕些改數據
+  3.Vue tool 監測的「數據不會變動」，畫面不更新
+  4.vm_.data 確實有變動修改
+  5.但 Vue 沒有輸出通知畫面更新
+  -->
+<script>
+  var app = new Vue({
+    el: '#app',
+    data() {
+      return {
+        person: [{
+          id: '001',
+          name: 'John',
+          age: 34
+        }]
+      }
+    },
+    methods: {
+      update() {
+        this.person[0] = {
+          id: '001',
+          name: 'JohnJohb',
+          age: 66
+        }
+      }
+    }
+  })
+  console.log(app)
+</script>
+
+</html>

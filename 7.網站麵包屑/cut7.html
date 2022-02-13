@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <ol class="breadcrumb">
+      <li><a href="#">CSS可樂</a></li>
+      <li><a href="#">CSS教學</a></li>
+      <li><a href="#">金魚系列</a></li>
+      <li><a href="#">切版技巧</a></li>
+      <li><a href="#">Flex</a></li>
+      <li><a href="#">麵包屑</a></li>
+    </ol>
+  </div>
+</body>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  body {
+    background-color: #562870;
+  }
+
+  .wrap {
+    padding: 10px 0;
+    background: #ec008b;
+    box-shadow: 0px 5px 5px hsla(260, 100%, 20%, .5);
+  }
+
+  .breadcrumb {
+    display: flex;
+    width: 90%;
+    margin: auto;
+  }
+
+  .breadcrumb li {
+    padding: 0 20px;
+  }
+
+  .breadcrumb a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+
+  .breadcrumb a:hover,
+  .breadcrumb li:last-child a {
+    color: #ff0;
+  }
+
+  .breadcrumb li+li {
+    margin-left: 0;
+  }
+
+  /* 跟屁蟲選取器 */
+  .breadcrumb li+li::before {
+    content: '>';
+    color: #fff;
+    margin-right: 20px;
+  }
+</style>
+
+</html>

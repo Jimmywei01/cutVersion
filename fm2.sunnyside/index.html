@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  > <!-- displays site properly based on user's device -->
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./images/favicon-32x32.png"
+  >
+
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo">
+      <div class="logoA">
+        <img src="./images/logo.svg" alt=""/>
+      </div>
+      <div class="nav">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <h1>We are creatives</h1>
+    <div class="line"></div>
+    <div class="arrow-bottom"></div>
+  </div>
+  <div class="warp">
+    <div class="left">
+      <div class="item">
+        <div class="txt">
+          <h3>Transform your brand</h3>
+          <p>We are a full-service creative agency specializing in helping brands grow fast.
+            Engage your clients through compelling visuals that do most of the marketing for you.</p>
+          <h5>Learn more</h5>
+        </div>
+      </div>
+      <div class="item">
+        <img src="./images/desktop/image-stand-out.jpg">
+      </div>
+      <div class="item">
+        <img src="./images/desktop/image-graphic-design.jpg">
+          <h3>Graphic design</h3>
+          <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures
+            potential clients' attention.</p>
+      </div>
+    </div>
+    <div class="right">
+      <div class="item">
+        <img src="./images/desktop/image-transform.jpg">
+      </div>
+      <div class="item">
+        <div class="txt">
+          <h3>Stand out to the right audience</h3>
+          <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters,
+            we'll build and extend your brand in digital places.</p>
+          <h5>Learn more</h5>
+        </div>
+      </div>
+      <div class="item">
+        <img src="./images/desktop/image-photography.jpg">
+        <h3>Photography</h3>
+        <p> Increase your credibility by getting the most stunning, high-quality photos that improve your business
+          image.</p>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <!-- <div class="content-header"></div> -->
+    <p>Client testimonials</p>
+    <div class="contact-item">
+      <div class="people">
+        <img src="./images/image-emily.jpg" alt="">
+        <p> We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+        <h3>Emily R.</h3>
+        <p>Marketing Director</p>
+      </div>
+      <div class="people">
+        <img src="./images/image-thomas.jpg" alt="">
+        <p> Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and
+          enjoyable experience.</p>
+        <h3>Thomas S.</h3>
+        <p>Chief Operating Officer</p>
+      </div>
+      <div class="people">
+        <img src="./images/image-jennie.jpg" alt="">
+        <p> Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended! </p>
+        <h3>Jennie F.</h3>
+        <p> Business Owner </p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <ul>
+      <li>
+        <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="">
+      </li>
+      <li>
+        <img src="./images/desktop/image-gallery-orange.jpg" alt="">
+      </li>
+      <li>
+        <img src="./images/desktop/image-gallery-cone.jpg" alt="">
+      </li>
+      <li>
+        <img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="">
+      </li>
+    </ul>
+  </div>
+  <footer>
+    <h3>Contact</h3>
+    <div class="select">
+      <ul>
+        <li>About</li>
+        <li>Services</li>
+        <li>Projects</li>
+      </ul>
+    </div>
+    <div class="icon">
+      <img src="./images/icon-facebook.svg" alt="">
+      <img src="./images/icon-instagram.svg" alt="">
+      <img src="./images/icon-twitter.svg" alt="">
+      <img src="./images/icon-pinterest.svg" alt="">
+    </div>
+
+  </footer>
+
+</body>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .header {
+    height: 500px;
+    max-width: 1400px;
+    background-image: url('./images/desktop/image-header.jpg');
+    background-size: cover;
+  }
+
+  .logo{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+  }
+
+  /*
+  nav 的 display: flex;
+  可以自動限制元素的行距
+  用 li 不能使用 flex
+   */
+  .nav {
+    display: flex;
+  }
+  .nav a {
+    text-decoration: none;
+    color: #fff;
+    padding:5px 2em;
+  }
+
+ .nav a:hover{
+  content: '';
+  display: block;
+  text-transform:uppercase;
+  font-weight: bold;
+  color: black;
+  background-color: #fff;
+  border-radius: 50px;
+ }
+
+ .header h1 {
+   position: relative;
+   text-align: center;
+   letter-spacing:5px;
+   text-transform:uppercase;
+   font-weight: bold;
+   color: #fff;
+   margin: 50px 0;
+ }
+
+ /* .header h1::after{
+   content:'|';
+   position: absolute;
+   color: #fff;
+   left:25%;
+ } */
+
+ .line::after {
+   content:'';
+   position: absolute;
+   margin:25px 0;
+   border: 2px solid #fff;
+   height: 80px;
+   /* right:50%;
+   transform:translateX(-50%) */
+   left: 50%;
+   /* top:50%; */
+   transform:translateX(-50%)
+ }
+
+ .line::before {
+   content:'';
+   position: absolute;
+   /* margin:auto 0 ;s */
+   border: 5px solid #fff;
+   height: 25px;
+   width:25px;
+   /* right:50%; */
+   left: 50%;
+   /* right:30px; */
+
+   top:30%;
+   /* transform:translate(-50%,-50%); */
+   border-width: 0 5px 5px 0;
+   transform: rotate(45deg);
+   /* transform:translate(-50%); */
+ }
+ .arrow-bottom {
+   position:absolute;
+   display: inline-block;
+   left: 50%;
+ width: 0;
+ height: 0;
+ border: 5px solid #fff;
+ border-width: 0 5px 5px 0;
+height: 25px;
+width:25px;
+ font-size: 0;
+ line-height: 0;
+ transform: rotate(45deg);
+ }
+
+</style>
+
+</html>

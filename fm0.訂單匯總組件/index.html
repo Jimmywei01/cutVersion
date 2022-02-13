@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  > <!-- displays site properly based on user's device -->
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./images/favicon-32x32.png"
+  >
+
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sec">
+    <!-- <div class="banner"></div> -->
+    <img
+      src="https://picsum.photos/370/250?random=20"
+      alt=""
+    >
+    <div class="container">
+      <h2>Order Summary</h2>
+      <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+      <div class="change_sub">
+        <div class="change_plate">
+          <div class="change_icon"></div>
+          <div class="change_plan">
+            <p>Annual Plan</p>
+            <p>$59.99/year</p>
+          </div>
+        </div>
+
+        <div class="change_btn">
+          <a href="">Change</a></div>
+      </div>
+      <button class="payment_btn">Proceed to Payment</button>
+      <div class="canael">Cancel Order</div>
+    </div>
+  </div>
+</body>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  html,
+  body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sec {
+    margin: auto;
+    width: 370px;
+    /* margin: 0 15px; */
+    text-align: center;
+    border: 1px solid #f9cec2;
+    background-color: #fff;
+    border-radius: 10px;
+    /* box-shadow: 10px 20px 50px #f7b6a7; */
+  }
+
+  .sec img {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    vertical-align: middle;
+  }
+
+  .container {
+    width: 85%;
+    margin: auto;
+  }
+
+  .container h2 {
+    margin: 20px;
+    font-size: 25px;
+  }
+
+  .container>p {
+    color: gray;
+    margin: 5px;
+  }
+
+  .change_sub {
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: hsl(225, 100%, 98%);
+  }
+  .change_plate {
+    display: flex;
+    align-items: center;
+  }
+  .change_plan > P {
+    font-weight: 700;
+  }
+
+  .change_plan > P + P {
+  font-weight: normal;
+  color: gray;
+  }
+
+  .change_icon {
+    border-radius: 50px;
+    width: 25px;
+    height: 25px;
+    margin: 20px;
+    /* margin: auto; */
+    background-color: cornflowerblue;
+  }
+
+  .change_btn {
+    font-size: smaller;
+    font-weight: bold;
+  }
+
+  .payment_btn{
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color: hsl(245, 75%, 52%);
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  .canael{
+        margin-bottom: 30px;
+        font-size: smaller;
+        color: darkslategray;
+        font-weight: bold;
+  }
+</style>
+
+</html>
